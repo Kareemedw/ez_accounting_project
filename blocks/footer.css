@@ -1,0 +1,17 @@
+.footer {
+  padding: 60px 0 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__title {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: rgba(33, 33, 33, 0.7);
+  margin: 0;
+}

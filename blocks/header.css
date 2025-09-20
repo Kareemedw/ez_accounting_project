@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header__title {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}

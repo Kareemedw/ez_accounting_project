@@ -1,0 +1,94 @@
+.card {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  position: relative;
+  padding: 32px 50px;
+  box-sizing: border-box;
+  margin: 20px 0 20px;
+}
+
+.card__utility_bill {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.card__form {
+  display: flex;
+  align-items: center;
+}
+
+.card__form_utitlity_bill {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.card__label {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  max-width: 400px;
+  width: 30%;
+}
+
+.card__label_utility_bill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.card__input {
+  margin: 8px 0 0;
+  border-radius: 8px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #212121;
+  padding: 10px;
+  opacity: 40%;
+  cursor: pointer;
+}
+
+.card__input_utility_bill {
+  margin-left: 20px;
+  margin-right: 12px;
+}
+
+.utilityBills {
+  list-style: none;
+}
+
+.operant__btn {
+  border: none;
+  background: none;
+}
+
+.bill__delete-btn {
+  border-style: none;
+  background: transparent url(../images/delete-icon.svg) center no-repeat;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  left: 310px;
+  top: 35px;
+}
+
+.bill__delete-btn:hover {
+  cursor: pointer;
+  background-color: #ff6565;
+  border-radius: 50%;
+}
+
+.bill__delete-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.3s ease;
+}

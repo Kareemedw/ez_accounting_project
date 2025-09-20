@@ -1,0 +1,11 @@
+[core]
+	editor = \"C:\\Users\\karee\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+[user]
+	name = Kareem Edwards
+	email = kareemjedwards54@gmail.com
+[init]
+	defaultBranch = main
+[gui]
+	recentrepo = C:/Users/karee/projects/simple-project
+
+.DS_Store

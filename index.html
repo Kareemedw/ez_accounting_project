@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EZ-Accounting(Mobile wallet & Budgeting)"
+    />
+    <meta name="author" content="Kareem Edwards Software Engineer" />
+    <meta name="keywords" content="HTML, CSS" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1 class="header__title">EZA - Mobile Wallet</h1>
+      </header>
+      <main class="content">
+        <section class="salary page__section">
+          <h2 class="card__title">Salary</h2>
+          <div class="card">
+            <form class="card__form card__form_salary" id="card-form-salary">
+              <label for="salary-input" class="card__label"
+                >Salary<input
+                  id="salary-input"
+                  type="number symbol"
+                  class="card__input"
+                  placeholder="Your salary" /><button
+                  type="button"
+                  class="bill__delete-btn"
+                  aria-label="Delete"
+                ></button
+              ></label>
+            </form>
+          </div>
+        </section>
+        <section class="expense page__section">
+          <h2 class="card__title">Mandatory/Recurring Bills</h2>
+          <div class="card card__utility_bill">
+            <ul class="card__list">
+              <li class="utilityBills">
+                <h3 class="">Utility Bills</h3>
+                <form
+                  class="card__form card__form_utitlity_bill"
+                  id="utility-bill"
+                >
+                  <label
+                    for="bills-input"
+                    class="card__label card__label_utility_bill"
+                    >Electric
+                    <input
+                      id="bills-input"
+                      type="number symbol"
+                      class="card__input card__input_utility_bill"
+                      placeholder="Your expenses" /><button
+                      type="button"
+                      class="bill__delete-btn"
+                      aria-label="Delete"
+                    >
+                      <div class="bill__delete-icon"></div></button
+                  ></label>
+                  <label
+                    for="bills-input"
+                    class="card__label card__label_utility_bill"
+                    >Water
+                    <input
+                      id="bills-input"
+                      type="number symbol"
+                      class="card__input card__input_utility_bill"
+                      placeholder="Your expenses" /><button
+                      type="button"
+                      class="bill__delete-btn"
+                      aria-label="Delete"
+                    >
+                      <div class="bill__delete-icon"></div></button
+                  ></label>
+                  <label
+                    for="bills-input"
+                    class="card__label card__label_utility_bill"
+                    >Gas/Heat
+                    <input
+                      id="bills-input"
+                      type="number symbol"
+                      class="card__input card__input_utility_bill"
+                      placeholder="Your expenses" /><button
+                      type="button"
+                      class="bill__delete-btn"
+                      aria-label="Delete"
+                    >
+                      <div class="bill__delete-icon"></div></button
+                  ></label>
+                  <label
+                    for="bills-input"
+                    class="card__label card__label_utility_bill"
+                    >Wifi/Phone
+                    <input
+                      id="bills-input"
+                      type="number symbol"
+                      class="card__input card__input_utility_bill"
+                      placeholder="Your expenses" /><button
+                      type="button"
+                      class="bill__delete-btn"
+                      aria-label="Delete"
+                    >
+                      <div class="bill__delete-icon"></div></button
+                  ></label>
+                  <label
+                    for="bills-input"
+                    class="card__label card__label_utility_bill"
+                    >Grocery
+                    <input
+                      id="bills-input"
+                      type="number symbol"
+                      class="card__input card__input_utility_bill"
+                      placeholder="Your expenses" /><button
+                      type="button"
+                      class="bill__delete-btn"
+                      aria-label="Delete"
+                    >
+                      <div class="bill__delete-icon"></div></button
+                  ></label>
+                </form>
+                <button type="button" class="add__btn" aria-label="Add">
+                  Add
+                </button>
+              </li>
+            </ul>
+            <li class="utilityBills">
+              <h3 class="">Recurring Subscription</h3>
+              <form
+                class="card__form card__form_utitlity_bill"
+                id="utility-bill"
+              >
+                <label
+                  for="bills-input"
+                  class="card__label card__label_utility_bill"
+                  >Netflix
+                  <input
+                    id="bills-input"
+                    type="number symbol"
+                    class="card__input card__input_utility_bill"
+                    placeholder="Your recurring expenses" /><button
+                    type="button"
+                    class="bill__delete-btn"
+                    aria-label="Delete"
+                  >
+                    <div class="bill__delete-icon"></div></button
+                ></label>
+                <label
+                  for="bills-input"
+                  class="card__label card__label_utility_bill"
+                  >Hulu
+                  <input
+                    id="bills-input"
+                    type="number symbol"
+                    class="card__input card__input_utility_bill"
+                    placeholder="Your recurring expenses" /><button
+                    type="button"
+                    class="bill__delete-btn"
+                    aria-label="Delete"
+                  >
+                    <div class="bill__delete-icon"></div></button
+                ></label>
+              </form>
+              <button type="button" class="add__btn" aria-label="Add">
+                Add
+              </button>
+            </li>
+          </div>
+        </section>
+        <section class="expenseTotal page__section">
+          <h2 class="card__title">Total Expenditure</h2>
+          <div class="card">
+            <form class="card__form" id="">
+              <label for="bills-input" class="card__label"
+                >Mandatory Expenses<input
+                  id="bills-input"
+                  type="number symbol"
+                  class="card__input"
+                  placeholder="Total expense"
+              /></label>
+              <button
+                class="operant__btn"
+                type="button"
+                onclick="changeValue(-1)"
+              >
+                +
+              </button>
+              <label for="subscription_input" class="card__label"
+                >Recurring Subscription<input
+                  id="subscription_input"
+                  type="number symbol"
+                  class="card__input"
+                  placeholder="Total expense"
+              /></label>
+              <button
+                class="operant__btn"
+                type="button"
+                onclick="changeValue(-1)"
+              >
+                =
+              </button>
+              <label class="card__label" for="total_input"
+                >Total<input
+                  id="total_input"
+                  type="number symbol"
+                  class="card__input"
+                  placeholder="Total"
+              /></label>
+            </form>
+          </div>
+        </section>
+        <section class="salaryBalance page__section">
+          <h2 class="card__title">Salary Balance</h2>
+          <div class="card">
+            <form class="card__form" id="">
+              <label for="salary-input" class="card__label"
+                >Salary<input
+                  id="salary-input"
+                  type="number symbol"
+                  class="card__input"
+                  placeholder="Salary"
+              /></label>
+              <button
+                class="operant__btn"
+                type="button"
+                onclick="changeValue(-1)"
+              >
+                -
+              </button>
+              <label class="card__label" for="total-expense-input"
+                >Total Expenditure<input
+                  id="total-expense-input"
+                  type="number symbol"
+                  class="card__input"
+                  placeholder="Total Expenditure"
+              /></label>
+              <button
+                class="operant__btn"
+                type="button"
+                onclick="changeValue(-1)"
+              >
+                =
+              </button>
+              <label class="card__label" for="total_input"
+                >Total<input
+                  id="total_input"
+                  type="number symbol"
+                  class="card__input"
+                  placeholder="Total"
+              /></label>
+            </form>
+          </div>
+        </section>
+        <section class="salaryBalance__tracking page__section">
+          <h2 class="">Balance Tracking</h2>
+          <div class="card">
+            <form class="card__form">
+              <label for="tracking-input" class="card__label"
+                >Balance Tracking<input
+                  id="tracking-input"
+                  type="number symbol"
+                  class="card__input"
+                  placeholder="Salary balance tracking"
+              /></label>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="footer page__section">
+        <p class="footer__title">2025 &copy; EZ-Accounting</p>
+      </footer>
+    </div>
+  </body>
+</html>
