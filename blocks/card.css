@@ -92,3 +92,7 @@
   opacity: 100%;
   transition: opacity 0.3s ease;
 }
+
+.card__balance_tracking {
+  margin-bottom: 20px;
+}
