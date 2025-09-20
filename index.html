@@ -23,9 +23,9 @@
           <h2 class="card__title">Salary</h2>
           <div class="card">
             <form class="card__form card__form_salary" id="card-form-salary">
-              <label for="salary-input" class="card__label"
+              <label for="salary-input-1" class="card__label"
                 >Salary<input
-                  id="salary-input"
+                  id="salary-input-1"
                   type="number symbol"
                   class="card__input"
                   placeholder="Your salary" /><button
@@ -128,56 +128,58 @@
                 </button>
               </li>
             </ul>
-            <li class="utilityBills">
-              <h3 class="">Recurring Subscription</h3>
-              <form
-                class="card__form card__form_utitlity_bill"
-                id="utility-bill"
-              >
-                <label
-                  for="bills-input"
-                  class="card__label card__label_utility_bill"
-                  >Netflix
-                  <input
-                    id="bills-input"
-                    type="number symbol"
-                    class="card__input card__input_utility_bill"
-                    placeholder="Your recurring expenses" /><button
-                    type="button"
-                    class="bill__delete-btn"
-                    aria-label="Delete"
-                  >
-                    <div class="bill__delete-icon"></div></button
-                ></label>
-                <label
-                  for="bills-input"
-                  class="card__label card__label_utility_bill"
-                  >Hulu
-                  <input
-                    id="bills-input"
-                    type="number symbol"
-                    class="card__input card__input_utility_bill"
-                    placeholder="Your recurring expenses" /><button
-                    type="button"
-                    class="bill__delete-btn"
-                    aria-label="Delete"
-                  >
-                    <div class="bill__delete-icon"></div></button
-                ></label>
-              </form>
-              <button type="button" class="add__btn" aria-label="Add">
-                Add
-              </button>
-            </li>
+            <ul class="card__list">
+              <li class="utilityBills">
+                <h3 class="">Recurring Subscription</h3>
+                <form
+                  class="card__form card__form_utitlity_bill"
+                  id="utility-bill"
+                >
+                  <label
+                    for="subscription_input"
+                    class="card__label card__label_utility_bill"
+                    >Netflix
+                    <input
+                      id="subscription_input"
+                      type="number symbol"
+                      class="card__input card__input_utility_bill"
+                      placeholder="Your recurring expenses" /><button
+                      type="button"
+                      class="bill__delete-btn"
+                      aria-label="Delete"
+                    >
+                      <div class="bill__delete-icon"></div></button
+                  ></label>
+                  <label
+                    for="subscription_input"
+                    class="card__label card__label_utility_bill"
+                    >Hulu
+                    <input
+                      id="subscription_input"
+                      type="number symbol"
+                      class="card__input card__input_utility_bill"
+                      placeholder="Your recurring expenses" /><button
+                      type="button"
+                      class="bill__delete-btn"
+                      aria-label="Delete"
+                    >
+                      <div class="bill__delete-icon"></div></button
+                  ></label>
+                </form>
+                <button type="button" class="add__btn" aria-label="Add">
+                  Add
+                </button>
+              </li>
+            </ul>
           </div>
         </section>
         <section class="expenseTotal page__section">
           <h2 class="card__title">Total Expenditure</h2>
           <div class="card">
-            <form class="card__form" id="">
-              <label for="bills-input" class="card__label"
+            <form class="card__form" id="total-expense">
+              <label for="total-utility-bill" class="card__label"
                 >Mandatory Expenses<input
-                  id="bills-input"
+                  id="total-utility-bill"
                   type="number symbol"
                   class="card__input"
                   placeholder="Total expense"
@@ -189,9 +191,9 @@
               >
                 +
               </button>
-              <label for="subscription_input" class="card__label"
+              <label for="total-subscription" class="card__label"
                 >Recurring Subscription<input
-                  id="subscription_input"
+                  id="total-subscription"
                   type="number symbol"
                   class="card__input"
                   placeholder="Total expense"
@@ -203,12 +205,12 @@
               >
                 =
               </button>
-              <label class="card__label" for="total_input"
-                >Total<input
-                  id="total_input"
+              <label class="card__label" for="total_input-1"
+                >Total Expenditure<input
+                  id="total_input-1"
                   type="number symbol"
                   class="card__input"
-                  placeholder="Total"
+                  placeholder="Total expense"
               /></label>
             </form>
           </div>
@@ -216,10 +218,10 @@
         <section class="salaryBalance page__section">
           <h2 class="card__title">Salary Balance</h2>
           <div class="card">
-            <form class="card__form" id="">
-              <label for="salary-input" class="card__label"
+            <form class="card__form" id="salary-balance">
+              <label for="salary-input-2" class="card__label"
                 >Salary<input
-                  id="salary-input"
+                  id="salary-input-2"
                   type="number symbol"
                   class="card__input"
                   placeholder="Salary"
@@ -245,12 +247,12 @@
               >
                 =
               </button>
-              <label class="card__label" for="total_input"
-                >Total<input
-                  id="total_input"
+              <label class="card__label" for="balance_input"
+                >Balance<input
+                  id="balance_input"
                   type="number symbol"
                   class="card__input"
-                  placeholder="Total"
+                  placeholder="Balance"
               /></label>
             </form>
           </div>
@@ -258,7 +260,10 @@
         <section class="salaryBalance__tracking page__section">
           <h2 class="">Balance Tracking</h2>
           <div class="card">
-            <form class="card__form card__balance_tracking">
+            <form
+              class="card__form card__balance_tracking"
+              id="balance-tracking"
+            >
               <label for="tracking-input" class="card__label"
                 >Balance Tracking<input
                   id="tracking-input"
@@ -275,5 +280,6 @@
         <p class="footer__title">2025 &copy; EZ-Accounting</p>
       </footer>
     </div>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
