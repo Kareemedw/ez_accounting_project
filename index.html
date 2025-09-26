@@ -41,135 +41,114 @@
           <h2 class="card__title">Mandatory/Recurring Bills</h2>
           <div class="card card__utility_bill">
             <ul class="card__list">
-              <li class="utilityBills">
-                <h3 class="">Utility Bills</h3>
-                <form
-                  class="card__form card__form_utitlity_bill"
-                  id="utility-bill"
-                >
-                  <label
-                    for="bills-input"
-                    class="card__label card__label_utility_bill"
-                    >Electric
+              <h3 class="">Utility Bills</h3>
+              <template id="card-template">
+                <li class="utilityBills">
+                  <form
+                    class="card__form card__form_utitlity_bill"
+                    id="utility-bill"
+                  >
+                    <label
+                      for="bills-input"
+                      class="card__label card__label_utility_bill utilityBill"
+                      id="utilityBills"
+                    ></label>
                     <input
                       id="bills-input"
                       type="number symbol"
-                      class="card__input card__input_utility_bill"
-                      placeholder="Your expenses" /><button
+                      class="card__input card__input_utility_bill bills-input"
+                      placeholder="Your expenses"
+                    /><button
                       type="button"
                       class="bill__delete-btn"
                       aria-label="Delete"
                     >
-                      <div class="bill__delete-icon"></div></button
-                  ></label>
-                  <label
-                    for="bills-input"
-                    class="card__label card__label_utility_bill"
-                    >Water
+                      <div class="bill__delete-icon"></div>
+                    </button>
+                  </form>
+                </li>
+              </template>
+              <div class="">
+                <form class="card__form" id="utility-bill">
+                  <fieldset class="form__fieldset">
                     <input
-                      id="bills-input"
-                      type="number symbol"
+                      id="bills_input-add"
+                      type="text"
                       class="card__input card__input_utility_bill"
-                      placeholder="Your expenses" /><button
-                      type="button"
-                      class="bill__delete-btn"
-                      aria-label="Delete"
-                    >
-                      <div class="bill__delete-icon"></div></button
-                  ></label>
-                  <label
-                    for="bills-input"
-                    class="card__label card__label_utility_bill"
-                    >Gas/Heat
+                      placeholder="Expense Name"
+                    />
                     <input
-                      id="bills-input"
-                      type="number symbol"
+                      id="bills_input_add"
+                      type="number"
                       class="card__input card__input_utility_bill"
-                      placeholder="Your expenses" /><button
+                      placeholder="Expense Price"
+                    />
+                    <button
                       type="button"
-                      class="bill__delete-btn"
-                      aria-label="Delete"
+                      class="add__btn"
+                      id="addBtn1"
+                      aria-label="Add"
                     >
-                      <div class="bill__delete-icon"></div></button
-                  ></label>
-                  <label
-                    for="bills-input"
-                    class="card__label card__label_utility_bill"
-                    >Wifi/Phone
-                    <input
-                      id="bills-input"
-                      type="number symbol"
-                      class="card__input card__input_utility_bill"
-                      placeholder="Your expenses" /><button
-                      type="button"
-                      class="bill__delete-btn"
-                      aria-label="Delete"
-                    >
-                      <div class="bill__delete-icon"></div></button
-                  ></label>
-                  <label
-                    for="bills-input"
-                    class="card__label card__label_utility_bill"
-                    >Grocery
-                    <input
-                      id="bills-input"
-                      type="number symbol"
-                      class="card__input card__input_utility_bill"
-                      placeholder="Your expenses" /><button
-                      type="button"
-                      class="bill__delete-btn"
-                      aria-label="Delete"
-                    >
-                      <div class="bill__delete-icon"></div></button
-                  ></label>
+                      Add
+                    </button>
+                  </fieldset>
                 </form>
-                <button type="button" class="add__btn" aria-label="Add">
-                  Add
-                </button>
-              </li>
+              </div>
             </ul>
-            <ul class="card__list">
-              <li class="utilityBills">
-                <h3 class="">Recurring Subscription</h3>
-                <form
-                  class="card__form card__form_utitlity_bill"
-                  id="utility-bill"
-                >
-                  <label
-                    for="subscription_input"
-                    class="card__label card__label_utility_bill"
-                    >Netflix
+            <ul class="card__lists">
+              <h3 class="">Recurring Subscription</h3>
+              <template id="card-templates">
+                <li class="recurringBills">
+                  <form
+                    class="card__form card__form_utitlity_bill"
+                    id="utility-bill"
+                  >
+                    <label
+                      for="subscription_input"
+                      class="card__label card__label_utility_bill subscription-input recurringBill"
+                      id="recurringBill"
+                    ></label>
                     <input
                       id="subscription_input"
                       type="number symbol"
-                      class="card__input card__input_utility_bill"
-                      placeholder="Your recurring expenses" /><button
+                      class="card__input card__input_utility_bill subscription-input"
+                      placeholder="Your recurring expenses"
+                    /><button
                       type="button"
                       class="bill__delete-btn"
                       aria-label="Delete"
                     >
-                      <div class="bill__delete-icon"></div></button
-                  ></label>
-                  <label
-                    for="subscription_input"
-                    class="card__label card__label_utility_bill"
-                    >Hulu
+                      <div class="bill__delete-icon"></div>
+                    </button>
+                  </form>
+                </li>
+              </template>
+              <div class="">
+                <form class="card__form" id="utility-bill">
+                  <fieldset class="form__fieldset">
                     <input
-                      id="subscription_input"
-                      type="number symbol"
+                      id="bills_input_add1"
+                      type="text"
                       class="card__input card__input_utility_bill"
-                      placeholder="Your recurring expenses" /><button
+                      placeholder="Expense Name"
+                    />
+                    <input
+                      id="bills_input_add2"
+                      type="number"
+                      class="card__input card__input_utility_bill"
+                      placeholder="Expense Price"
+                    />
+                    <button
                       type="button"
-                      class="bill__delete-btn"
-                      aria-label="Delete"
+                      class="add__btn"
+                      id="addBtn2"
+                      aria-label="Add"
                     >
-                      <div class="bill__delete-icon"></div></button
-                  ></label>
+                      Add
+                    </button>
+                  </fieldset>
                 </form>
-                <button type="button" class="add__btn" aria-label="Add">
-                  Add
-                </button>
-              </li>
+              </div>
             </ul>
           </div>
         </section>
@@ -209,7 +188,7 @@
                 >Total Expenditure<input
                   id="total_input-1"
                   type="number symbol"
-                  class="card__input"
+                  class="card__input total_input-1"
                   placeholder="Total expense"
               /></label>
             </form>
@@ -264,15 +243,87 @@
               class="card__form card__balance_tracking"
               id="balance-tracking"
             >
-              <label for="tracking-input" class="card__label"
+              <label
+                for="tracking-input"
+                class="card__label card__label_tracking"
                 >Balance Tracking<input
-                  id="tracking-input"
+                  id="tracking-inputs"
                   type="number symbol"
-                  class="card__input"
+                  class="card__input card__balance-input"
                   placeholder="Salary balance tracking"
               /></label>
             </form>
-            <button type="button" class="add__btn" aria-label="Add">Add</button>
+            <h2 class="card__title card__title_balance">Expense Tracking</h2>
+            <div class="">
+              <form class="card__form" id="tracking-balance">
+                <fieldset class="form__fieldset">
+                  <input
+                    id="tracking_balance-add"
+                    type="text"
+                    class="card__input card__input_utility_bill"
+                    placeholder="Your expenses"
+                  />
+                  <input
+                    id="tracking_balance_add"
+                    type="number"
+                    class="card__input card__input_utility_bill"
+                    placeholder="Expense Price"
+                  />
+                  <button
+                    type="button"
+                    class="add__btn"
+                    id="addBtn3"
+                    aria-label="Add"
+                  >
+                    Add
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+            <div class="card card__balance_bill">
+              <ul class="card__list1">
+                <h3 class="">Expense after bills</h3>
+                <template id="card-template1">
+                  <li class="balanceBill">
+                    <form
+                      class="card__form card__form_utitlity_bill"
+                      id="utility-bill"
+                    >
+                      <label
+                        for="balance-input"
+                        class="card__label card__label_utility_bill balanceBill"
+                      ></label>
+                      <input
+                        id="balance-input1"
+                        type="number symbol"
+                        class="card__input card__input_utility_bill balance__input balance-input1"
+                        placeholder="Your expenses"
+                      /><button
+                        type="button"
+                        class="bill__delete-btn"
+                        aria-label="Delete"
+                      >
+                        <div class="bill__delete-icon"></div>
+                      </button>
+                    </form>
+                  </li>
+                </template>
+              </ul>
+            </div>
+            <form
+              class="card__form card__balance_tracking"
+              id="balance-tracking"
+            >
+              <label
+                for="tracking-input"
+                class="card__label card__label_tracking"
+                >Additional Expenses<input
+                  id="tracking-input"
+                  type="number symbol"
+                  class="card__input card__balance-input"
+                  placeholder="Other Expense Totoal"
+              /></label>
+            </form>
           </div>
         </section>
       </main>

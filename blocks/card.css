@@ -4,10 +4,13 @@
   position: relative;
   padding: 32px 50px;
   box-sizing: border-box;
-  margin: 20px 0 20px;
 }
 
 .card__list {
+  padding: 0;
+}
+
+.card__list1 {
   padding: 0;
 }
 
@@ -15,6 +18,17 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+}
+
+.card__title_balance {
+  margin: 0;
+}
+
+.card__balance_bill {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+  padding: 20px 50px;
 }
 
 .card__form {
@@ -26,6 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  position: relative;
 }
 
 .card__label {
@@ -40,8 +55,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  margin-top: 20px;
   position: relative;
 }
 
@@ -67,9 +81,20 @@
   list-style: none;
 }
 
+.recurringBills {
+  list-style: none;
+}
+
+.balanceBill {
+  list-style: none;
+}
+
 .operant__btn {
   border: none;
   background: none;
+  display: flex;
+  position: relative;
+  top: 15px;
 }
 
 .bill__delete-btn {
@@ -79,7 +104,7 @@
   display: flex;
   position: absolute;
   left: 310px;
-  top: 35px;
+  top: 60px;
   cursor: pointer;
 }
 
@@ -91,9 +116,14 @@
 .bill__delete-icon {
   width: 32px;
   height: 32px;
-  cursor: pointer;
   opacity: 100%;
   transition: opacity 0.3s ease;
+}
+
+.bill__delete-btn:hover {
+  cursor: pointer;
+  background-color: #ff6565;
+  border-radius: 50%;
 }
 
 .card__balance_tracking {
@@ -102,6 +132,34 @@
 
 .add__btn {
   cursor: pointer;
+  background-color: #212121;
+  padding: 18px 58px;
+  max-width: 156px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #fcf5e5;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.3s ease;
+  border: none;
+  margin-top: 12px;
+}
+
+.add__btn:hover {
+  opacity: 80%;
+}
+
+.form__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__label_tracking {
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1075px) {
