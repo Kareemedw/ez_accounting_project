@@ -14,6 +14,10 @@
   padding: 0;
 }
 
+.card__lists {
+  padding: 0;
+}
+
 .card__utility_bill {
   display: flex;
   align-items: baseline;
@@ -171,11 +175,19 @@
     padding: 0 16px;
     flex-direction: column;
   }
+
+  .operant__btn {
+    top: 5px;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .card__utility_bill {
     flex-direction: column;
+  }
+
+  .operant__btn {
+    top: 5px;
   }
 }
 
@@ -193,5 +205,18 @@
   .bill__delete-btn {
     left: 170px;
     top: 25px;
+  }
+
+  .operant__btn {
+    top: 5px;
+  }
+
+  .bill__delete-btn {
+    top: 45px;
+    left: 190px;
+  }
+
+  .card__form_additional_expense {
+    padding: 0;
   }
 }
