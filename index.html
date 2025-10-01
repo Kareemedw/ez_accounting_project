@@ -22,23 +22,28 @@
         <section class="salary page__section">
           <h2 class="card__title">Salary</h2>
           <div class="card">
+            <form class="card__form card__form_date" id="card-form-date">
+              <label for="date-input-1" class="card__label card__label_date"
+                >Date<input
+                  id="date-input-1"
+                  type="date"
+                  class="card__input"
+                  placeholder="Month & Year"
+              /></label>
+            </form>
             <form class="card__form card__form_salary" id="card-form-salary">
-              <label for="salary-input-1" class="card__label"
+              <label for="salary-input-1" class="card__label card__label_salary"
                 >Salary<input
                   id="salary-input-1"
                   type="number symbol"
                   class="card__input"
-                  placeholder="Your salary" /><button
-                  type="button"
-                  class="bill__delete-btn"
-                  aria-label="Delete"
-                ></button
-              ></label>
+                  placeholder="Your salary"
+              /></label>
             </form>
           </div>
         </section>
         <section class="expense page__section">
-          <h2 class="card__title">Mandatory/Recurring Bills</h2>
+          <h2 class="card__title">Mandatory Bills</h2>
           <div class="card card__utility_bill">
             <ul class="card__list">
               <h3 class="">Utility Bills</h3>

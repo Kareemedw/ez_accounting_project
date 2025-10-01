@@ -51,6 +51,10 @@
   width: 30%;
 }
 
+.card__label_salary {
+  margin: 0 auto;
+}
+
 .card__label_utility_bill {
   display: flex;
   flex-direction: row;

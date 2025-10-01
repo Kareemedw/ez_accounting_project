@@ -33,7 +33,7 @@ const initialRecurringBill = [
 ];
 
 const initialAdditionalBills = [
-  {
+  /*{
     name: "Uber",
     price: "",
   },
@@ -44,7 +44,7 @@ const initialAdditionalBills = [
   {
     name: "Doordash",
     price: "",
-  },
+  },*/
 ];
 
 const salaryForm = document.querySelector("#card-form-salary");
@@ -318,12 +318,6 @@ function calculateTotalBalance() {
 
   balanceTrack();
 }
-
-/*document
-  .querySelectorAll("#balance-input1, #tracking-input")
-  .forEach((input) => {
-    input.addEventListener("input", calculateTotalBalance);
-  });*/
 
 function addExpenseTotal() {
   const totalUtilityBill = document.querySelector("#total-utility-bill");
