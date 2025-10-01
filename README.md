@@ -91,7 +91,13 @@ Add authentication for multiple users.
 
 Export reports to CSV / PDF.
 
+## Deployment
+
+## https://kareemedw.github.io/ez_accounting_project/
+
+This webpage is deployed to GitHub.
+
 👤 Author
 
 Kareem Edwards – Software Engineer
-📧 Contact: (add email/github/portfolio link here)
+📧 Contact: (https://github.com/Kareemedw)
