@@ -183,7 +183,7 @@
   }
 
   .bill__delete-btn {
-    left: 325px;
+    left: 320px;
   }
 }
 
@@ -208,7 +208,7 @@
   }
 
   .bill__delete-btn {
-    left: 325px;
+    left: 318px;
   }
 
   .card__title_balance {
@@ -261,5 +261,11 @@
 
   .card__title_additional {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .bill__delete-btn {
+    left: 330px;
   }
 }
