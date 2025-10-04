@@ -181,15 +181,44 @@
   .operant__btn {
     top: 5px;
   }
+
+  .bill__delete-btn {
+    left: 325px;
+  }
 }
 
 @media screen and (max-width: 900px) {
+  .card__list {
+    margin: 0 auto;
+  }
+  .card__lists {
+    margin: 0 auto;
+  }
+  .card__list1 {
+    margin: 0 auto;
+  }
+
   .card__utility_bill {
     flex-direction: column;
+    gap: 50px;
   }
 
   .operant__btn {
     top: 5px;
+  }
+
+  .bill__delete-btn {
+    left: 325px;
+  }
+
+  .card__title_balance {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card__title_additional {
+    margin-bottom: 0;
   }
 }
 
@@ -208,18 +237,13 @@
 
   .card__input {
     padding: 0;
-    max-width: 140px;
+    max-width: 300px;
   }
 
   .card__input_utility_bill {
     padding: 0;
-    max-width: 140px;
+    max-width: 180px;
     justify-content: center;
-  }
-
-  .bill__delete-btn {
-    left: 170px;
-    top: 25px;
   }
 
   .operant__btn {
@@ -228,10 +252,14 @@
 
   .bill__delete-btn {
     top: 45px;
-    left: 190px;
+    left: 225px;
   }
 
-  .card__form_additional_expense {
-    padding: 0;
+  .card__balance_bill {
+    justify-content: center;
+  }
+
+  .card__title_additional {
+    margin-bottom: 0;
   }
 }
