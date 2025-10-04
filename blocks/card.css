@@ -187,7 +187,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (orientation: landscape) {
   .card__list {
     margin: 0 auto;
   }
@@ -261,11 +261,5 @@
 
   .card__title_additional {
     margin-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 900px) and (orientation: landscape) {
-  .bill__delete-btn {
-    left: 380px;
   }
 }
