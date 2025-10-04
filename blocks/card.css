@@ -266,6 +266,6 @@
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
   .bill__delete-btn {
-    left: 330px;
+    left: 380px;
   }
 }
