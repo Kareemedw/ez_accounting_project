@@ -195,7 +195,7 @@
 
 @media screen and (max-width: 630px) {
   .card__label {
-    width: 50%;
+    width: 100%;
   }
 
   .card__label_salary {
