@@ -207,7 +207,7 @@ function getCardElement1(data) {
   cardDeleteBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     cardElement1.remove();
-    calculateTotal();
+    calculateTotalBalance();
   });
 
   cardLabel.textContent = data.name;

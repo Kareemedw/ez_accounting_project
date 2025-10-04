@@ -65,6 +65,8 @@
   align-items: center;
   margin-top: 20px;
   position: relative;
+  width: 50%;
+  max-width: 800px;
 }
 
 .card__input {
@@ -194,6 +196,19 @@
 @media screen and (max-width: 630px) {
   .card__label {
     width: 50%;
+  }
+
+  .card__label_salary {
+    margin-top: 12px;
+  }
+
+  .card__label_date {
+    margin: 0 auto;
+  }
+
+  .card__input {
+    padding: 0;
+    max-width: 140px;
   }
 
   .card__input_utility_bill {
