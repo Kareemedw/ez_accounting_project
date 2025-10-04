@@ -187,6 +187,12 @@
   }
 }
 
+@media only screen and (max-width: 910px) and (orientation: landscape) {
+  .bill__delete-btn {
+    left: 380px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .card__list {
     margin: 0 auto;
