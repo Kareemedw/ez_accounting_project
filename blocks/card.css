@@ -178,18 +178,16 @@
     flex-direction: column;
   }
 
+  .card__form_utitlity_bill {
+    position: relative;
+  }
+
   .operant__btn {
     top: 5px;
   }
 
   .bill__delete-btn {
     left: 320px;
-  }
-}
-
-@media only screen and (max-width: 910px) and (orientation: landscape) {
-  .bill__delete-btn {
-    left: 380px;
   }
 }
 

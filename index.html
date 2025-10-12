@@ -16,7 +16,9 @@
   <body>
     <div class="page">
       <header class="header">
-        <h1 class="header__title">EZA - Mobile Wallet</h1>
+        <nav class="nav">
+          <h1 class="header__title">EZA - Mobile Wallet</h1>
+        </nav>
       </header>
       <main class="content">
         <section class="salary page__section">
@@ -57,7 +59,8 @@
                       for="bills-input"
                       class="card__label card__label_utility_bill utilityBill"
                       id="utilityBills"
-                    ></label>
+                    >
+                    </label>
                     <input
                       id="bills-input"
                       type="number symbol"
@@ -73,7 +76,7 @@
                   </form>
                 </li>
               </template>
-              <div class="">
+              <div class="card__add">
                 <form class="card__form" id="utility-bill">
                   <fieldset class="form__fieldset">
                     <input
@@ -81,12 +84,14 @@
                       type="text"
                       class="card__input card__input_utility_bill"
                       placeholder="Expense Name"
+                      required
                     />
                     <input
                       id="bills_input_add"
                       type="number"
                       class="card__input card__input_utility_bill"
                       placeholder="Expense Price"
+                      required
                     />
                     <button
                       type="button"
@@ -128,7 +133,7 @@
                   </form>
                 </li>
               </template>
-              <div class="">
+              <div class="card__add">
                 <form class="card__form" id="utility-bill">
                   <fieldset class="form__fieldset">
                     <input
@@ -136,12 +141,14 @@
                       type="text"
                       class="card__input card__input_utility_bill"
                       placeholder="Expense Name"
+                      required
                     />
                     <input
                       id="bills_input_add2"
                       type="number"
                       class="card__input card__input_utility_bill"
                       placeholder="Expense Price"
+                      required
                     />
                     <button
                       type="button"
@@ -267,12 +274,14 @@
                     type="text"
                     class="card__input card__input_utility_bill"
                     placeholder="Your expenses"
+                    required
                   />
                   <input
                     id="tracking_balance_add"
                     type="number"
                     class="card__input card__input_utility_bill"
                     placeholder="Expense Price"
+                    required
                   />
                   <button
                     type="button"

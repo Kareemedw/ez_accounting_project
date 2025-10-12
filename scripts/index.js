@@ -47,6 +47,12 @@ const initialAdditionalBills = [
   },*/
 ];
 
+const initialCardsAll = [
+  initialBills,
+  initialRecurringBill,
+  initialAdditionalBills,
+];
+
 const salaryForm = document.querySelector("#card-form-salary");
 const salaryInputInitial = document.querySelector("#salary-input-1");
 const salaryBalanceForm = document.querySelector("#salary-balance");
@@ -76,6 +82,22 @@ const cardTemplates = document
 const cardTemplate1 = document
   .querySelector("#card-template1")
   .content.querySelector(".balanceBill");
+
+//const allCardTemplate = [cardTemplate, cardTemplates, cardTemplate1];
+
+//const allCardElements = [cardElement, cardElements, cardElement1];
+
+/*const allBillsName = [
+  additionalBillsName,
+  additionalRecurringSubName,
+  additionalExpenseName,
+];
+
+const allBillsPrice = [
+  additionalBillsPrice,
+  additionalRecurringSubPrice,
+  additionalExpensePrice,
+];*/
 
 const cardElement = cardTemplate.cloneNode(true);
 const cardElements = cardTemplates.cloneNode(true);
@@ -387,17 +409,17 @@ document
   .querySelector("#tracking-input, #balance_input")
   .addEventListener("input", balanceTrack);
 
-initialBills.forEach(function (item) {
+initialCardsAll[0].forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
 
-initialRecurringBill.forEach(function (item) {
+initialCardsAll[1].forEach(function (item) {
   const cardElements = getCardElements(item);
   cardLists.append(cardElements);
 });
 
-initialAdditionalBills.forEach(function (item) {
-  const cardElement1 = getCardElement1(item);
-  cardsList1.append(cardElement1);
+initialCardsAll[2].forEach(function (item) {
+  const cardElements = getCardElements(item);
+  cardLists.append(cardElements);
 });
