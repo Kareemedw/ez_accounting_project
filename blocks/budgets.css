@@ -1,0 +1,125 @@
+.budget__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add__budget-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 12px;
+  padding: 1rem;
+  background: #2563eb;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  display: block;
+}
+
+.budget__card {
+  margin-top: 16px;
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.budget__card-header {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.budget__card-title {
+  font-size: 1.1rem;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  border-style: none;
+  cursor: pointer;
+  opacity: 70%;
+  transition: opacity 0.3s ease;
+  padding: 0;
+  color: #212121;
+  background: transparent;
+}
+
+.budget__card-title:hover {
+  opacity: 100%;
+}
+
+.budget__card-subtitle {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.budget__card-chev {
+  font-size: 1.25rem;
+  transition: transform 200ms ease;
+  margin-top: 50px;
+}
+
+/* Collapsed by default */
+.budget__card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 250ms ease;
+  overflow-y: auto;
+  padding: 0 16px; /* keep horizontal padding */
+  background-color: #90ee90;
+}
+
+/* Expanded */
+.budget__card--open .budget__card-body {
+  padding: 16px;
+}
+
+.budget__card--open .budget__card-chev {
+  transform: rotate(180deg);
+}
+
+.budget__delete-btn {
+  border-style: none;
+  background: transparent url(../images/X-icon.svg) center no-repeat;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.budget__delete-btn:hover {
+  cursor: pointer;
+  background-color: #ff6565;
+  border-radius: 50%;
+}
+
+.budget__delete-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.3s ease;
+}
+
+@media screen and (max-width: 630px) {
+  .budget__card-chev {
+    margin-top: 80px;
+  }
+}

@@ -97,6 +97,7 @@
 
 .balanceBill {
   list-style: none;
+  width: 100%;
 }
 
 .operant__btn {
@@ -196,6 +197,10 @@
   }
   .card__list1 {
     margin: 0 auto;
+  }
+
+  .card__label {
+    width: 50%;
   }
 
   .card__utility_bill {
