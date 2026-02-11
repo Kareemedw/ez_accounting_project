@@ -26,7 +26,13 @@ export function getCardElements(data, calc) {
   const cardDeleteBtn = cardElements.querySelector(".bill__delete-icon");
   cardDeleteBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    cardElements.remove();
+    if (!cardDeleteBtn) return;
+
+    const row = cardDeleteBtn.closest("li");
+    if (!row) return;
+
+    row.remove();
+
     calc._calculateTotals();
   });
 
@@ -44,7 +50,12 @@ export function getCardElement(data, calc) {
   const cardDeleteBtn = cardElement.querySelector(".bill__delete-icon");
   cardDeleteBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    cardElement.remove();
+    if (!cardDeleteBtn) return;
+
+    const row = cardDeleteBtn.closest("li");
+    if (!row) return;
+
+    row.remove();
     calc._calculateTotals();
   });
 
@@ -62,7 +73,12 @@ export function getCardElement1(data, calc) {
   const cardDeleteBtn = cardElement1.querySelector(".bill__delete-icon");
   cardDeleteBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    cardElement1.remove();
+    if (!cardDeleteBtn) return;
+
+    const row = cardDeleteBtn.closest("li");
+    if (!row) return;
+
+    row.remove();
     calc._calculateTotalBalance();
   });
 
