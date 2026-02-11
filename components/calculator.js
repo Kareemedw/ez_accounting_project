@@ -5,7 +5,7 @@ export default class Calculator {
     selectors = {},
     onChange = null, // optional callback after each recalculation
   }) {
-    if (!root) throw new Error("Calculator: root element is required");
+    if (!root) throw new Error("Calculator: root is required");
 
     this._root = root;
     this._onChange = onChange;
@@ -16,17 +16,15 @@ export default class Calculator {
       subscriptionInputs: ".subscription-input",
       balanceInputs: ".balance-input1",
 
-      totalUtilityBill: "#total-utility-bill",
-      totalRecurringSubscription: "#total-subscription",
-      totalExpenseInitial: "#total_input-1",
-      totalExpenseFinal: "#total-expense-input",
+      totalUtilityBill: '[data-role="total-utility-bill"]',
+      totalRecurringSubscription: '[data-role="total-subscription"]',
+      totalExpenseInitial: '[data-role="total_input-1"]',
+      totalExpenseFinal: '[data-role="total-expense-input"]',
 
-      salaryFinal: "#salary-input-2",
-      salaryBalanceInitial: "#balance_input",
-
-      otherExpenses: "#tracking-input",
-      salaryBalanceFinal: "#tracking-inputs",
-
+      salaryFinal: '[data-role="salary-input-2"]',
+      salaryBalanceInitial: '[data-role="balance_input"]',
+      otherExpenses: '[data-role="tracking-input"]',
+      salaryBalanceFinal: '[data-role="tracking-inputs"]',
       ...selectors,
     };
 
@@ -143,6 +141,12 @@ export default class Calculator {
     // Event delegation: listen once, recalc when relevant inputs change
     this._root.addEventListener("input", (e) => {
       const t = e.target;
+      if (t.matches('[data-role="salary-input-1"]')) {
+        const finalSalary = this._root.querySelector(
+          '[data-role="salary-input-2"]',
+        );
+        if (finalSalary) finalSalary.value = t.value;
+      }
 
       if (
         t.matches(this._selectors.billsInputs) ||

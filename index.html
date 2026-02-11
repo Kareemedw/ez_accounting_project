@@ -21,347 +21,105 @@
         </nav>
       </header>
       <main class="content">
-        <section class="budgets page__section">
+        <section class="budgets page__section" data-role="overall-budget-body">
           <h2>My Budgets</h2>
-          <section class="budget__card" id="add-budget-form">
-            <button
-              class="budget__card-header"
-              type="button"
-              id="toggleBudgetCard"
-            >
-              <div class="budget__card-header_text">
+          <template id="overall-budget-card-template">
+            <section class="budget__card" data-role="add-budget-form">
+              <button
+                class="budget__card-header"
+                type="button"
+                data-role="toggleBudgetCard"
+              >
+                <div class="budget__card-header_text">
+                  <span
+                    type="button"
+                    class="budget__card-title"
+                    data-role="edit-budget-name"
+                    data-no-toggle="true"
+                    aria-label="Open"
+                  >
+                    <h3 class="budget__name">New Budget</h3>
+                    <img src="./images/pen-icon.svg" alt="Pen icon" />
+                  </span>
+                  <p class="budget__card-subtitle">Tap to expand / collapse</p>
+                </div>
                 <span
                   type="button"
-                  class="budget__card-title"
-                  id="budget-name"
-                  aria-label="Open"
-                  ><h3 class="budget__name">New Budget</h3>
-                  <img src="./images/pen-icon.svg" alt="Pen icon" />
+                  class="budget__delete-btn"
+                  aria-label="Delete"
+                  data-no-toggle="true"
+                >
+                  <div class="budget__delete-icon"></div>
                 </span>
-                <p class="budget__card-subtitle">Tap to expand / collapse</p>
-              </div>
-              <span
-                type="button"
-                class="budget__delete-btn"
-                aria-label="Delete"
-              >
-                <div class="budget__delete-icon"></div>
-              </span>
-              <span class="budget__card-chev">⌄</span>
-            </button>
-            <div class="budget__card-body" id="budgetCardBody">
-              <section class="salary page__section">
-                <h2 class="card__title">Salary</h2>
-                <div class="card">
-                  <form class="card__form card__form_date" id="card-form-date">
-                    <label
-                      for="date-input-1"
-                      class="card__label card__label_date"
-                      >Date<input
-                        id="date-input-1"
-                        type="date"
-                        class="card__input"
-                        placeholder="Month & Year"
-                    /></label>
-                  </form>
-                  <form
-                    class="card__form card__form_salary"
-                    id="card-form-salary"
-                  >
-                    <label
-                      for="salary-input-1"
-                      class="card__label card__label_salary"
-                      ><button
-                        type="button"
-                        class="budget__card-title"
-                        id="salary-input1"
-                        aria-label="Open"
-                      >
-                        <h3 class="budget__type">Salary</h3>
-                        <img
-                          src="./images/pen-icon.svg"
-                          alt="Pen icon"
-                        /></button
-                      ><input
-                        id="salary-input-1"
-                        type="number symbol"
-                        class="card__input"
-                        placeholder="Your salary"
-                    /></label>
-                  </form>
-                </div>
-              </section>
-              <section class="expense page__section">
-                <h2 class="card__title">Mandatory Bills</h2>
-                <div class="card card__utility_bill">
-                  <ul class="card__list">
-                    <h3 class="">Utility Bills</h3>
-                    <template id="card-template">
-                      <li class="utilityBills">
-                        <form
-                          class="card__form_utitlity_bill"
-                          id="utility-bill"
-                        >
-                          <label
-                            for="bills-input"
-                            class="card__label card__label_utility_bill utilityBill"
-                            id="utilityBills"
-                          >
-                          </label>
-                          <input
-                            id="bills-input"
-                            type="number symbol"
-                            class="card__input card__input_utility_bill bills-input"
-                            placeholder="Your expenses"
-                          /><button
-                            type="button"
-                            class="bill__delete-btn"
-                            aria-label="Delete"
-                          >
-                            <div class="bill__delete-icon"></div>
-                          </button>
-                        </form>
-                      </li>
-                    </template>
-                    <div class="card__add">
-                      <form class="card__form" id="utility-bill">
-                        <fieldset class="form__fieldset">
-                          <input
-                            id="bills_input-add"
-                            type="text"
-                            class="card__input card__input_utility_bill"
-                            placeholder="Expense Name"
-                            required
-                          />
-                          <input
-                            id="bills_input_add"
-                            type="number"
-                            class="card__input card__input_utility_bill"
-                            placeholder="Expense Price"
-                            required
-                          />
-                          <button
-                            type="button"
-                            class="add__btn"
-                            id="addBtn1"
-                            aria-label="Add"
-                          >
-                            Add
-                          </button>
-                        </fieldset>
-                      </form>
-                    </div>
-                  </ul>
-                  <ul class="card__lists">
-                    <h3 class="">Recurring Subscription</h3>
-                    <template id="card-templates">
-                      <li class="recurringBills">
-                        <form
-                          class="card__form_utitlity_bill"
-                          id="utility-bill"
-                        >
-                          <label
-                            for="subscription_input"
-                            class="card__label card__label_utility_bill subscription-input recurringBill"
-                            id="recurringBill"
-                          ></label>
-                          <input
-                            id="subscription_input"
-                            type="number symbol"
-                            class="card__input card__input_utility_bill subscription-input"
-                            placeholder="Your recurring expenses"
-                          /><button
-                            type="button"
-                            class="bill__delete-btn"
-                            aria-label="Delete"
-                          >
-                            <div class="bill__delete-icon"></div>
-                          </button>
-                        </form>
-                      </li>
-                    </template>
-                    <div class="card__add">
-                      <form class="card__form" id="utility-bill">
-                        <fieldset class="form__fieldset">
-                          <input
-                            id="bills_input_add1"
-                            type="text"
-                            class="card__input card__input_utility_bill"
-                            placeholder="Expense Name"
-                            required
-                          />
-                          <input
-                            id="bills_input_add2"
-                            type="number"
-                            class="card__input card__input_utility_bill"
-                            placeholder="Expense Price"
-                            required
-                          />
-                          <button
-                            type="button"
-                            class="add__btn"
-                            id="addBtn2"
-                            aria-label="Add"
-                          >
-                            Add
-                          </button>
-                        </fieldset>
-                      </form>
-                    </div>
-                  </ul>
-                </div>
-              </section>
-              <section class="expenseTotal page__section">
-                <h2 class="card__title">Total Expenditure</h2>
-                <div class="card">
-                  <form class="card__form" id="total-expense">
-                    <label for="total-utility-bill" class="card__label"
-                      >Mandatory Expenses<input
-                        id="total-utility-bill"
-                        type="number symbol"
-                        class="card__input"
-                        placeholder="Total expense"
-                    /></label>
-                    <button
-                      class="operant__btn"
-                      type="button"
-                      onclick="changeValue(-1)"
+                <span class="budget__card-chev">⌄</span>
+              </button>
+              <div class="budget__card-body" data-role="budget-body">
+                <section class="salary page__section">
+                  <h2 class="card__title">Salary</h2>
+                  <div class="card">
+                    <form
+                      class="card__form card__form_date"
+                      data-role="card-form-date"
                     >
-                      +
-                    </button>
-                    <label for="total-subscription" class="card__label"
-                      >Recurring Subscription<input
-                        id="total-subscription"
-                        type="number symbol"
-                        class="card__input"
-                        placeholder="Total expense"
-                    /></label>
-                    <button
-                      class="operant__btn"
-                      type="button"
-                      onclick="changeValue(-1)"
+                      <label
+                        for="date-input-1"
+                        class="card__label card__label_date"
+                        >Date<input
+                          data-role="date-input-1"
+                          type="date"
+                          class="card__input"
+                          placeholder="Month & Year"
+                      /></label>
+                    </form>
+                    <form
+                      class="card__form card__form_salary"
+                      data-role="card-form-salary"
                     >
-                      =
-                    </button>
-                    <label class="card__label" for="total_input-1"
-                      >Total Expenditure<input
-                        id="total_input-1"
-                        type="number symbol"
-                        class="card__input total_input-1"
-                        placeholder="Total expense"
-                    /></label>
-                  </form>
-                </div>
-              </section>
-              <section class="salaryBalance page__section">
-                <h2 class="card__title">Salary Balance</h2>
-                <div class="card">
-                  <form class="card__form" id="salary-balance">
-                    <label for="salary-input-2" class="card__label"
-                      >Salary<input
-                        id="salary-input-2"
-                        type="number symbol"
-                        class="card__input"
-                        placeholder="Salary"
-                    /></label>
-                    <button
-                      class="operant__btn"
-                      type="button"
-                      onclick="changeValue(-1)"
-                    >
-                      -
-                    </button>
-                    <label class="card__label" for="total-expense-input"
-                      >Total Expenditure<input
-                        id="total-expense-input"
-                        type="number symbol"
-                        class="card__input"
-                        placeholder="Total Expenditure"
-                    /></label>
-                    <button
-                      class="operant__btn"
-                      type="button"
-                      onclick="changeValue(-1)"
-                    >
-                      =
-                    </button>
-                    <label class="card__label" for="balance_input"
-                      >Balance<input
-                        id="balance_input"
-                        type="number symbol"
-                        class="card__input"
-                        placeholder="Balance"
-                    /></label>
-                  </form>
-                </div>
-              </section>
-              <section class="salaryBalance__tracking page__section">
-                <h2 class="">Balance Tracking</h2>
-                <div class="card">
-                  <form
-                    class="card__form card__balance_tracking"
-                    id="balance-tracking"
-                  >
-                    <label
-                      for="tracking-input"
-                      class="card__label card__label_tracking"
-                      >Balance Tracking<input
-                        id="tracking-inputs"
-                        type="number symbol"
-                        class="card__input card__balance-input"
-                        placeholder="Salary balance tracking"
-                    /></label>
-                  </form>
-                  <h2 class="card__title card__title_balance">
-                    Expense Tracking
-                  </h2>
-                  <div class="">
-                    <form class="card__form" id="tracking-balance">
-                      <fieldset class="form__fieldset">
-                        <input
-                          id="tracking_balance-add"
-                          type="text"
-                          class="card__input card__input_utility_bill"
-                          placeholder="Your expenses"
-                          required
-                        />
-                        <input
-                          id="tracking_balance_add"
-                          type="number"
-                          class="card__input card__input_utility_bill"
-                          placeholder="Expense Price"
-                          required
-                        />
-                        <button
+                      <label
+                        for="salary-input-1"
+                        class="card__label card__label_salary"
+                        ><button
                           type="button"
-                          class="add__btn"
-                          id="addBtn3"
-                          aria-label="Add"
+                          class="budget__card-title budget__card-title_type"
+                          data-role="edit-budget-type"
+                          aria-label="Open"
+                          data-no-toggle="true"
                         >
-                          Add
-                        </button>
-                      </fieldset>
+                          <h3 class="budget__type">Salary</h3>
+                          <img
+                            src="./images/pen-icon.svg"
+                            alt="Pen icon"
+                          /></button
+                        ><input
+                          data-role="salary-input-1"
+                          type="number symbol"
+                          class="card__input"
+                          placeholder="Your salary"
+                      /></label>
                     </form>
                   </div>
-                  <div class="card card__balance_bill">
-                    <ul class="card__list1">
-                      <h3 class="card__title_additional">
-                        Expense after bills
-                      </h3>
-                      <template id="card-template1">
-                        <li class="balanceBill">
+                </section>
+                <section class="expense page__section">
+                  <h2 class="card__title">Mandatory Bills</h2>
+                  <div class="card card__utility_bill">
+                    <ul class="card__list">
+                      <h3 class="">Utility Bills</h3>
+                      <template data-role="card-template">
+                        <li class="utilityBills" data-role="utilityBills">
                           <form
-                            class="card__form_utitlity_bill card__form_additional_expense"
-                            id="utility-bill"
+                            class="card__form_utitlity_bill"
+                            data-role="utility-bill"
                           >
                             <label
-                              for="balance-input"
-                              class="card__label card__label_utility_bill balanceBill"
-                            ></label>
+                              for="bills-input"
+                              class="card__label card__label_utility_bill utilityBill"
+                              data-role="utility-bill1"
+                            >
+                            </label>
                             <input
-                              id="balance-input1"
+                              data-role="bills-input"
                               type="number symbol"
-                              class="card__input card__input_utility_bill balance__input balance-input1"
+                              class="card__input card__input_utility_bill bills-input"
                               placeholder="Your expenses"
                             /><button
                               type="button"
@@ -373,29 +131,280 @@
                           </form>
                         </li>
                       </template>
+                      <div class="card__add">
+                        <form class="card__form" data-role="utility-bill">
+                          <fieldset class="form__fieldset">
+                            <input
+                              data-role="bills_input-add"
+                              type="text"
+                              class="card__input card__input_utility_bill"
+                              placeholder="Expense Name"
+                              required
+                            />
+                            <input
+                              data-role="bills_input_add"
+                              type="number"
+                              class="card__input card__input_utility_bill"
+                              placeholder="Expense Price"
+                              required
+                            />
+                            <button
+                              type="button"
+                              class="add__btn"
+                              data-role="addBtn1"
+                              aria-label="Add"
+                            >
+                              Add
+                            </button>
+                          </fieldset>
+                        </form>
+                      </div>
+                    </ul>
+                    <ul class="card__lists">
+                      <h3 class="">Recurring Subscription</h3>
+                      <template data-role="card-templates">
+                        <li class="recurringBills">
+                          <form
+                            class="card__form_utitlity_bill"
+                            data-role="utility-bill"
+                          >
+                            <label
+                              for="subscription_input"
+                              class="card__label card__label_utility_bill subscription-input recurringBill"
+                              data-role="recurringBill"
+                            ></label>
+                            <input
+                              data-role="subscription_input"
+                              type="number symbol"
+                              class="card__input card__input_utility_bill subscription-input"
+                              placeholder="Your recurring expenses"
+                            /><button
+                              type="button"
+                              class="bill__delete-btn"
+                              aria-label="Delete"
+                            >
+                              <div class="bill__delete-icon"></div>
+                            </button>
+                          </form>
+                        </li>
+                      </template>
+                      <div class="card__add">
+                        <form class="card__form" data-role="utility-bill">
+                          <fieldset class="form__fieldset">
+                            <input
+                              data-role="bills_input_add1"
+                              type="text"
+                              class="card__input card__input_utility_bill"
+                              placeholder="Expense Name"
+                              required
+                            />
+                            <input
+                              data-role="bills_input_add2"
+                              type="number"
+                              class="card__input card__input_utility_bill"
+                              placeholder="Expense Price"
+                              required
+                            />
+                            <button
+                              type="button"
+                              class="add__btn"
+                              data-role="addBtn2"
+                              aria-label="Add"
+                            >
+                              Add
+                            </button>
+                          </fieldset>
+                        </form>
+                      </div>
                     </ul>
                   </div>
-                  <form
-                    class="card__form card__balance_tracking"
-                    id="balance-tracking"
-                  >
-                    <label
-                      for="tracking-input"
-                      class="card__label card__label_tracking"
-                      >Additional Expenses<input
-                        id="tracking-input"
-                        type="number symbol"
-                        class="card__input card__balance-input"
-                        placeholder="Other Expense Totoal"
-                    /></label>
-                  </form>
-                </div>
-              </section>
-            </div>
-          </section>
+                </section>
+                <section class="expenseTotal page__section">
+                  <h2 class="card__title">Total Expenditure</h2>
+                  <div class="card">
+                    <form class="card__form" data-role="total-expense">
+                      <label for="total-utility-bill" class="card__label"
+                        >Mandatory Expenses<input
+                          data-role="total-utility-bill"
+                          type="number symbol"
+                          class="card__input"
+                          placeholder="Total expense"
+                      /></label>
+                      <button
+                        class="operant__btn"
+                        type="button"
+                        onclick="changeValue(-1)"
+                      >
+                        +
+                      </button>
+                      <label for="total-subscription" class="card__label"
+                        >Recurring Subscription<input
+                          data-role="total-subscription"
+                          type="number symbol"
+                          class="card__input"
+                          placeholder="Total expense"
+                      /></label>
+                      <button
+                        class="operant__btn"
+                        type="button"
+                        onclick="changeValue(-1)"
+                      >
+                        =
+                      </button>
+                      <label class="card__label" for="total_input-1"
+                        >Total Expenditure<input
+                          data-role="total_input-1"
+                          type="number symbol"
+                          class="card__input total_input-1"
+                          placeholder="Total expense"
+                      /></label>
+                    </form>
+                  </div>
+                </section>
+                <section class="salaryBalance page__section">
+                  <h2 class="card__title">Salary Balance</h2>
+                  <div class="card">
+                    <form class="card__form" data-role="salary-balance">
+                      <label for="salary-input-2" class="card__label"
+                        >Salary<input
+                          data-role="salary-input-2"
+                          type="number symbol"
+                          class="card__input"
+                          placeholder="Salary"
+                      /></label>
+                      <button
+                        class="operant__btn"
+                        type="button"
+                        onclick="changeValue(-1)"
+                      >
+                        -
+                      </button>
+                      <label class="card__label" for="total-expense-input"
+                        >Total Expenditure<input
+                          data-role="total-expense-input"
+                          type="number symbol"
+                          class="card__input"
+                          placeholder="Total Expenditure"
+                      /></label>
+                      <button
+                        class="operant__btn"
+                        type="button"
+                        onclick="changeValue(-1)"
+                      >
+                        =
+                      </button>
+                      <label class="card__label" for="balance_input"
+                        >Balance<input
+                          data-role="balance_input"
+                          type="number symbol"
+                          class="card__input"
+                          placeholder="Balance"
+                      /></label>
+                    </form>
+                  </div>
+                </section>
+                <section class="salaryBalance__tracking page__section">
+                  <h2 class="">Balance Tracking</h2>
+                  <div class="card">
+                    <form
+                      class="card__form card__balance_tracking"
+                      data-role="balance-tracking"
+                    >
+                      <label
+                        for="tracking-input"
+                        class="card__label card__label_tracking"
+                        >Balance Tracking<input
+                          data-role="tracking-inputs"
+                          type="number symbol"
+                          class="card__input card__balance-input"
+                          placeholder="Salary balance tracking"
+                      /></label>
+                    </form>
+                    <h2 class="card__title card__title_balance">
+                      Expense Tracking
+                    </h2>
+                    <div class="tracking__balance">
+                      <form class="card__form" data-role="tracking-balance">
+                        <fieldset class="form__fieldset">
+                          <input
+                            data-role="tracking_balance-add"
+                            type="text"
+                            class="card__input card__input_utility_bill"
+                            placeholder="Your expenses"
+                            required
+                          />
+                          <input
+                            data-role="tracking_balance_add"
+                            type="number"
+                            class="card__input card__input_utility_bill"
+                            placeholder="Expense Price"
+                            required
+                          />
+                          <button
+                            type="button"
+                            class="add__btn"
+                            data-role="addBtn3"
+                            aria-label="Add"
+                          >
+                            Add
+                          </button>
+                        </fieldset>
+                      </form>
+                    </div>
+                    <div class="card card__balance_bill">
+                      <ul class="card__list1">
+                        <h3 class="card__title_additional">
+                          Expense after bills
+                        </h3>
+                        <template data-role="card-template1">
+                          <li class="balanceBill">
+                            <form
+                              class="card__form_utitlity_bill card__form_additional_expense"
+                              data-role="utility-bill"
+                            >
+                              <label
+                                for="balance-input"
+                                class="card__label card__label_utility_bill balanceBills"
+                              ></label>
+                              <input
+                                data-role="balance-input1"
+                                type="number symbol"
+                                class="card__input card__input_utility_bill balance__input balance-input1"
+                                placeholder="Your expenses"
+                              /><button
+                                type="button"
+                                class="bill__delete-btn"
+                                aria-label="Delete"
+                              >
+                                <div class="bill__delete-icon"></div>
+                              </button>
+                            </form>
+                          </li>
+                        </template>
+                      </ul>
+                    </div>
+                    <form
+                      class="card__form card__balance_tracking"
+                      data-role="balance-tracking"
+                    >
+                      <label
+                        for="tracking-input"
+                        class="card__label card__label_tracking"
+                        >Additional Expenses<input
+                          data-role="tracking-input"
+                          type="number symbol"
+                          class="card__input card__balance-input"
+                          placeholder="Other Expense Totoal"
+                      /></label>
+                    </form>
+                  </div>
+                </section>
+              </div>
+            </section>
+          </template>
         </section>
       </main>
-      <button class="add__budget-btn" data-role="toggleBudgetCard">
+      <button class="add__budget-btn" data-role="add-budget">
         + Add New Budget
       </button>
       <footer class="footer page__section">
@@ -409,21 +418,31 @@
             aria-label="Close"
           ></button>
           <h2 class="modal__title">Type of Budget</h2>
-          <form class="modal__form" id="edit-modal-form" novalidate>
-            <label for="budget-type-input" class="modal__label modal_label_name"
+          <form
+            class="modal__form modal__form_name"
+            id="edit-budget-name-form"
+            novalidate
+          >
+            <label for="budget-name-input" class="modal__label modal_label_name"
               >Budget Type
               <input
-                id="budget-type-input"
+                id="budget-name-input"
                 type="text"
                 class="modal__input"
-                placeholder="Budget Type"
+                placeholder="Budget Name"
                 minlength="2"
                 maxlength="40"
                 required
               />
-              <span id="budget-type-input-error" class="modal__error"></span>
+              <span id="budget-name-input-error" class="modal__error"></span>
             </label>
-            <button type="submit" class="modal__submit_btn" aria-label="Submit">
+            <button
+              type="submit"
+              class="modal__submit_btn"
+              aria-label="Submit"
+              id="modal-submit-btn-name"
+              data-no-toggle="true"
+            >
               Save
             </button>
           </form>
@@ -437,11 +456,15 @@
             aria-label="Close"
           ></button>
           <h2 class="modal__title">Edit Budget Name</h2>
-          <form class="modal__form" id="edit-modal-form" novalidate>
-            <label for="budget-name-input" class="modal__label modal_label_name"
+          <form
+            class="modal__form modal__form_type"
+            id="edit-budget-type-form"
+            novalidate
+          >
+            <label for="budget-type-input" class="modal__label modal_label_name"
               >Budget Name
               <input
-                id="budget-name-input"
+                id="budget-type-input"
                 type="text"
                 class="modal__input"
                 placeholder="Budget Name"
@@ -449,15 +472,21 @@
                 maxlength="40"
                 required
               />
-              <span id="budget-name-input-error" class="modal__error"></span>
+              <span id="budget-type-input-error" class="modal__error"></span>
             </label>
-            <button type="submit" class="modal__submit_btn" aria-label="Submit">
+            <button
+              type="submit"
+              class="modal__submit_btn"
+              id="modal-submit-btn-type"
+              aria-label="Submit"
+              data-no-toggle="true"
+            >
               Save
             </button>
           </form>
         </div>
       </div>
     </div>
-    <script type="module" src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/index.js" defer></script>
   </body>
 </html>
