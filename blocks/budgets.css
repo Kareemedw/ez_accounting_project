@@ -84,6 +84,7 @@
 
 .budget__card-title_type {
   margin-bottom: 0;
+  align-items: baseline;
 }
 
 .budget__card-subtitle {
