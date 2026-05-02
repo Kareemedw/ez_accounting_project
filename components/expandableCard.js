@@ -5,6 +5,10 @@ class ExpandableCard {
     toggleSelector = '[data-role="toggleBudgetCard"]',
     bodySelector,
     openClass = "budget__card--open",
+    parentBodySelector = null,
+    parentCardSelector = null,
+    parentOpenClass = null,
+
     // anything matching these should NOT trigger toggle
     ignoreSelector = `
       [data-no-toggle="true"],
@@ -26,6 +30,10 @@ class ExpandableCard {
     this._toggleSelector = toggleSelector;
     this._bodySelector = bodySelector;
     this._openClass = openClass;
+
+    this._parentBodySelector = parentBodySelector;
+    this._parentCardSelector = parentCardSelector;
+    this._parentOpenClass = parentOpenClass;
     this._ignoreSelector = ignoreSelector.replace(/\s+/g, " ").trim();
 
     this._handleClick = this._handleClick.bind(this);
@@ -52,22 +60,42 @@ class ExpandableCard {
     const toggle = e.target.closest(this._toggleSelector);
     if (!toggle) return;
 
-    const card = toggle.closest(".budget__card");
+    const card = toggle.closest(this._cardSelector);
     if (!card) return;
 
-    const body = card.querySelector('[data-role="budget-body"]');
+    const body = card.querySelector(this._bodySelector);
     if (!body) return;
     const isOpen = card.classList.toggle(this._openClass);
     body.style.maxHeight = isOpen ? body.scrollHeight + "px" : "0px";
+
+    this._refreshParentHeight(card);
   }
 
-  _refreshAll() {
+  /*_refreshAll() {
     // optional: call after adding/removing content inside open cards
     this._rootEl.querySelectorAll(this._card).forEach((card) => {
       if (!card.classList.contains(this._openClass)) return;
       const body = card.querySelector(this._body);
       if (body) body.style.maxHeight = body.scrollHeight + "px";
     });
+  }*/
+  _refreshParentHeight(card) {
+    if (!this._parentBodySelector || !this._parentCardSelector) return;
+
+    const parentCard = card.closest(this._parentCardSelector);
+    if (!parentCard) return;
+
+    if (
+      this._parentOpenClass &&
+      !parentCard.classList.contains(this._parentOpenClass)
+    ) {
+      return;
+    }
+
+    const parentBody = parentCard.querySelector(this._parentBodySelector);
+    if (parentBody) {
+      parentBody.style.maxHeight = parentBody.scrollHeight + "px";
+    }
   }
 }
 

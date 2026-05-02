@@ -61,12 +61,26 @@ function addBudgetCard(name) {
   budgetsRoot.append(card);
 }
 
-const expandableCard = new ExpandableCard({
+const budgetCards = new ExpandableCard({
   rootEl: budgetsRoot,
+  cardSelector: ".budget__card",
   toggleSelector: '[data-role="toggleBudgetCard"]',
+  bodySelector: '[data-role="budget-body"]',
   openClass: "budget__card--open",
 });
-expandableCard._init();
+budgetCards._init();
+
+const billsCards = new ExpandableCard({
+  rootEl: budgetsRoot,
+  cardSelector: ".bills__card",
+  toggleSelector: '[data-role="toggleBillsCard"]',
+  bodySelector: '[data-role="bills-body"]',
+  openClass: "bills__card--open",
+  parentCardSelector: ".budget__card",
+  parentBodySelector: '[data-role="budget-body"]',
+  parentOpenClass: "budget__card--open",
+});
+billsCards._init();
 
 ui["salaryBalanceInitial"].addEventListener("input", function () {
   ui["salaryBalanceFinal"].value = ui["salaryBalanceInitial"].value;

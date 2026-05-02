@@ -1,0 +1,85 @@
+.bills__item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Narrow header container */
+.bills__card {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.25s ease;
+  margin-top: 15px;
+}
+
+.budget__card-body,
+.bills__card-body {
+  left: 0;
+  top: 100%; /* sits right under the header */
+  width: 100%;
+  z-index: 50;
+
+  border-radius: 0 0 16px 16px;
+
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+  overflow-y: scroll;
+}
+
+.bills__card--open.bills__card-body {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.bills__card-header {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-style: none;
+  position: relative;
+  background-color: whitesmoke;
+}
+
+.bills__card-header_text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bills__name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.bills__card-title {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  background: transparent;
+  border-style: none;
+}
+
+.bills__card-title_type {
+  margin-bottom: 0;
+  align-items: baseline;
+}
+
+.bills__card-subtitle {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.bills__card-chev {
+  font-size: 1.25rem;
+  transition: transform 0.25s ease;
+  margin-top: auto;
+}
+
+.bills__card--open .bills__card-chev {
+  transform: rotate(180deg);
+}

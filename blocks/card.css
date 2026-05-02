@@ -171,6 +171,12 @@
 }
 
 .card__label_tracking {
+  position: absolute;
+  left: 800px;
+  top: 35px;
+}
+
+.card__label_tracking-total {
   margin: 0 auto;
 }
 

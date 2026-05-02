@@ -6,7 +6,7 @@ import {
   editBudgetNameInput,
   editBudgetTypeModal,
   editBudgetTypeInput,
-} from "../utilis/Constants.js";
+} from "./Constants.js";
 
 export function openModal(modal) {
   modal.classList.add("modal_is-opened");
