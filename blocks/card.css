@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+/*.card__number-one {
+  display: flex;
+}*/
+
 .card__list {
   padding: 0;
 }
@@ -193,6 +197,14 @@
   .bill__delete-btn {
     left: 320px;
   }
+
+  .card__label_tracking {
+    margin-top: 20px;
+  }
+  .card__label_tracking {
+    position: relative;
+    left: 5px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -231,6 +243,10 @@
 
   .card__title_additional {
     margin-bottom: 0;
+  }
+
+  .card__label_tracking {
+    position: relative;
   }
 }
 
@@ -273,5 +289,9 @@
 
   .card__title_additional {
     margin-bottom: 0;
+  }
+
+  .card__label_tracking {
+    position: relative;
   }
 }
